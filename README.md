@@ -2,7 +2,7 @@
 ![](https://github.com/alexsandroferreira/react-dash-shop/workflows/CHANGELOG%20Generator/badge.svg)
 [![Release](https://img.shields.io/github/v/release/alexsandroferreira/react-dash-shop?color=lgreen)](https://github.com/alexsandroferreira/react-dash-shop/releases)
 
-Este projeto template, utilizando React puro, Shadcn UI e Tailwind, visa ajudar desenvolvedores com uma configuração mínima. 
+O projeto Dashboard Shop visa simular o painel de controle de um lojista que opera um restaurante em um aplicativo de delivery. Ele inclui funcionalidades como rastreamento de pedidos, métricas do restaurante, e visualização de pedidos mensais e diários. 
 
 Além disso, a integração contínua será implementada para automatizar o versionamento de código utilizando a biblioteca Release-it.
 
