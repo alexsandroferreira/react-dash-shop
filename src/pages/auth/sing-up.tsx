@@ -7,24 +7,24 @@ import { z } from 'zod'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-const singUpForm = z.object({
+const signUpForm = z.object({
   restaurantName: z.string(),
   manegerName: z.string(),
   phone: z.string(),
   email: z.string().email(),
 })
 
-type SingUpForm = z.infer<typeof singUpForm>
+type SignUpForm = z.infer<typeof signUpForm>
 
-export function SingUp() {
+export function SignUp() {
   const navigate = useNavigate()
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm<SingUpForm>()
+  } = useForm<SignUpForm>()
 
-  async function handleSingUp(data: SingUpForm) {
+  async function handleSignUp(data: SignUpForm) {
     try {
       console.log(data)
       await new Promise((resolve) => setTimeout(resolve, 2000))
@@ -57,7 +57,7 @@ export function SingUp() {
               Aproveite essa oportunidade para empreeder.
             </p>
           </div>
-          <form className="space-y-4" onSubmit={handleSubmit(handleSingUp)}>
+          <form className="space-y-4" onSubmit={handleSubmit(handleSignUp)}>
             <div className="space-y-2">
               <Label htmlFor="restaurantName">Estabelecimento</Label>
               <Input

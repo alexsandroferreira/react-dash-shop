@@ -5,35 +5,35 @@ import { Link } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
-import { signIn } from '@/api/sing-in'
+import { signIn } from '@/api/sign-in'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
-const singInForm = z.object({
+const signInForm = z.object({
   email: z.string().email(),
 })
 
-type SingInForm = z.infer<typeof singInForm>
+type SignInForm = z.infer<typeof signInForm>
 
-export function SingIn() {
+export function SignIn() {
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm<SingInForm>()
+  } = useForm<SignInForm>()
 
   const { mutateAsync: authenticate } = useMutation({
     mutationFn: signIn,
   })
-  async function handleSingIn(data: SingInForm) {
+  async function handleSignIn(data: SignInForm) {
     try {
       await authenticate({ email: data.email })
 
       toast.success('Enviamos um link de autenticação para seu email', {
         action: {
           label: 'Renviar email',
-          onClick: () => handleSingIn(data),
+          onClick: () => handleSignIn(data),
         },
       })
     } catch (error) {
@@ -57,7 +57,7 @@ export function SingIn() {
               Acompanhe suas vendas pelo painel do parceiro.
             </p>
           </div>
-          <form className="space-y-4" onSubmit={handleSubmit(handleSingIn)}>
+          <form className="space-y-4" onSubmit={handleSubmit(handleSignIn)}>
             <div className="space-y-2">
               <Label htmlFor="email">Digite seu email</Label>
               <Input id="email" type="email" {...register('email')} />
