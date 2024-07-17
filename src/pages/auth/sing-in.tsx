@@ -1,12 +1,15 @@
+import { useMutation } from '@tanstack/react-query'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
+import { signIn } from '@/api/sing-in'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+
 const singInForm = z.object({
   email: z.string().email(),
 })
@@ -20,10 +23,12 @@ export function SingIn() {
     formState: { isSubmitting },
   } = useForm<SingInForm>()
 
+  const { mutateAsync: authenticate } = useMutation({
+    mutationFn: signIn,
+  })
   async function handleSingIn(data: SingInForm) {
     try {
-      console.log(data)
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      await authenticate({ email: data.email })
 
       toast.success('Enviamos um link de autenticação para seu email', {
         action: {
