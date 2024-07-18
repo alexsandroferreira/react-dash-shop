@@ -1,5 +1,8 @@
 import { DropdownMenuSeparator } from '@radix-ui/react-dropdown-menu'
+import { useQuery } from '@tanstack/react-query'
 import { Building, ChevronDown, LogOut } from 'lucide-react'
+
+import { getProfile } from '@/api/get-profile'
 
 import { Button } from './ui/button'
 import {
@@ -11,6 +14,10 @@ import {
 } from './ui/dropdown-menu'
 
 function AccountMenu() {
+  const { data: profile } = useQuery({
+    queryKey: ['profile'],
+    queryFn: getProfile,
+  })
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -18,7 +25,7 @@ function AccountMenu() {
           variant="outline"
           className="flex select-none items-center gap-2"
         >
-          Lanches Joao
+          {profile?.name}
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
