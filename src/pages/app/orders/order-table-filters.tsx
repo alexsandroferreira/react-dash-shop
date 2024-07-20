@@ -74,6 +74,7 @@ export function OrderTableFilters() {
 
       return state
     })
+
     reset({
       orderId: '',
       customerName: '',
@@ -120,8 +121,8 @@ export function OrderTableFilters() {
                 <SelectItem value="pending"> Pendente</SelectItem>
                 <SelectItem value="canceled"> Cancelado</SelectItem>
                 <SelectItem value="processing">Em preparo</SelectItem>
-                <SelectItem value="delviring">Em entrega</SelectItem>
-                <SelectItem value="delvired">Entregue</SelectItem>
+                <SelectItem value="delivering">Em entrega</SelectItem>
+                <SelectItem value="delivered">Entregue</SelectItem>
               </SelectContent>
             </Select>
           )
