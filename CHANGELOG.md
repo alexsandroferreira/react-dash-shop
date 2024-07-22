@@ -1,5 +1,39 @@
 # Changelog
 
+## [0.3.0](https://github.com/alexsandroferreira/react-dash-shop/compare/0.2.0...0.3.0) (2024-07-22)
+
+
+### Features | 🏁
+
+* add api client ([0c9ec5c](https://github.com/alexsandroferreira/react-dash-shop/commit/0c9ec5c40803ed5cb26fb82118310fa295d6ce05))
+* add data in revenue chart ([6268625](https://github.com/alexsandroferreira/react-dash-shop/commit/6268625b3eae0875be146ec3956befeccc0f7737))
+* add delay in request and skeleton component ([d43dc8a](https://github.com/alexsandroferreira/react-dash-shop/commit/d43dc8a7fab28995a091564531f06fc7ad2e8c46))
+* add filter in orders ([ced46f1](https://github.com/alexsandroferreira/react-dash-shop/commit/ced46f13f65e0358f72c6de3dadf5cbc24845da8))
+* add get-managed-restaurant route ([75d6cf2](https://github.com/alexsandroferreira/react-dash-shop/commit/75d6cf2f11293f34819118337a126ae0b84423f2))
+* add metric popular products in dashboard ([a0a5b66](https://github.com/alexsandroferreira/react-dash-shop/commit/a0a5b66a0c57d88642e8938d3c06b814e95af177))
+* add metrics in dashboard ([c559283](https://github.com/alexsandroferreira/react-dash-shop/commit/c559283a5e07b6ff83212a630ebd64894ee7f7df))
+* add Optimistic UI in update-profile ([6d0b7b3](https://github.com/alexsandroferreira/react-dash-shop/commit/6d0b7b398a262e3eab1187d3e88a204a1a957fb3))
+* add pagination with useQuery ([378d843](https://github.com/alexsandroferreira/react-dash-shop/commit/378d843896b34e53f4f8e20114b44a742ca59ca4))
+* add route cancel-order with react-query ([699127e](https://github.com/alexsandroferreira/react-dash-shop/commit/699127ee8d10f6ca5514dbba38df3904f1e4a2df))
+* add route get-order-details ([11528da](https://github.com/alexsandroferreira/react-dash-shop/commit/11528da6488faee92bfdb93f8b76b86d2164c7c2))
+* add route get-orders ([60b160a](https://github.com/alexsandroferreira/react-dash-shop/commit/60b160a69489ad2913a2064d3a5b90583028368e))
+* add route get-profile ([3db3334](https://github.com/alexsandroferreira/react-dash-shop/commit/3db3334835fb00d3b154c61688f7e5120b39a616))
+* add route register-restaurant ([33211a2](https://github.com/alexsandroferreira/react-dash-shop/commit/33211a25a9088feb59fb459e096bb59cb80a5884))
+* add route sign-out ([ce527c1](https://github.com/alexsandroferreira/react-dash-shop/commit/ce527c119ee89ba1fcf896b0e46f55e34d8fbd4d))
+* add update chached http ([020ccbc](https://github.com/alexsandroferreira/react-dash-shop/commit/020ccbc2fccb0cb4ddaa077c84ecfa53e03f13f3))
+* **api:** add function update-profile ([4f8492f](https://github.com/alexsandroferreira/react-dash-shop/commit/4f8492f27cd36705f1549d0d7768c28b8b8a6e2f))
+* **components:** add textarea and custom store-profile-dialog ([40d94f3](https://github.com/alexsandroferreira/react-dash-shop/commit/40d94f307b9e0c1464b4cad395e73b9e81df1c5c))
+* finish actions and  orders routes ([cb3022a](https://github.com/alexsandroferreira/react-dash-shop/commit/cb3022a22933aed91f78a9e5536184a3e3e6ae2f))
+* **layouts/app:** add logout ([a77de9b](https://github.com/alexsandroferreira/react-dash-shop/commit/a77de9bb2e897590872a02ffb19f8b872beb2631))
+* **src/app:** add reat-query ([235453f](https://github.com/alexsandroferreira/react-dash-shop/commit/235453fa2dcff160de748d814f85024a3efa60c8))
+* **src/auth/sing-in:** authenticate user ([22cd43e](https://github.com/alexsandroferreira/react-dash-shop/commit/22cd43e41b604e8d0bd11eb3f88ff19160a1ecb5))
+
+
+### Bug Fixes | 🚨
+
+* in filters ([d115c43](https://github.com/alexsandroferreira/react-dash-shop/commit/d115c436918014c88a6df3b156b8db48fa125e31))
+* **src/auth:** correct typo in files ([a78d3dd](https://github.com/alexsandroferreira/react-dash-shop/commit/a78d3ddb3d8af7c4bbf34b57ef689ddc704ec9d9))
+
 ## 0.2.0 (2024-07-16)
 
 
