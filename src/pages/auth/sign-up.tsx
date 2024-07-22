@@ -1,38 +1,48 @@
+import { useMutation } from '@tanstack/react-query'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
+import { registerRestaurant } from '@/api/register-restaurant'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-const singUpForm = z.object({
+const signUpForm = z.object({
   restaurantName: z.string(),
-  manegerName: z.string(),
+  managerName: z.string(),
   phone: z.string(),
   email: z.string().email(),
 })
 
-type SingUpForm = z.infer<typeof singUpForm>
+type SignUpForm = z.infer<typeof signUpForm>
 
-export function SingUp() {
+export function SignUp() {
   const navigate = useNavigate()
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm<SingUpForm>()
+  } = useForm<SignUpForm>()
 
-  async function handleSingUp(data: SingUpForm) {
+  const { mutateAsync: registerRestaurantFn } = useMutation({
+    mutationFn: registerRestaurant,
+  })
+
+  async function handleSignUp(data: SignUpForm) {
     try {
-      console.log(data)
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      await registerRestaurantFn({
+        restaurantName: data.restaurantName,
+        managerName: data.managerName,
+        email: data.email,
+        phone: data.phone,
+      })
 
       toast.success('Estabelecimento cadastrado com sucesso.', {
         action: {
           label: 'Login',
-          onClick: () => navigate('/sing-in'),
+          onClick: () => navigate(`/sing-in?email=${data.email}`),
         },
       })
     } catch (error) {
@@ -57,7 +67,7 @@ export function SingUp() {
               Aproveite essa oportunidade para empreeder.
             </p>
           </div>
-          <form className="space-y-4" onSubmit={handleSubmit(handleSingUp)}>
+          <form className="space-y-4" onSubmit={handleSubmit(handleSignUp)}>
             <div className="space-y-2">
               <Label htmlFor="restaurantName">Estabelecimento</Label>
               <Input
@@ -72,7 +82,7 @@ export function SingUp() {
               <Input
                 id="manegerName"
                 type="text"
-                {...register('manegerName')}
+                {...register('managerName')}
               />
             </div>
 
