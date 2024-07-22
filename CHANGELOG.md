@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.4.0](https://github.com/alexsandroferreira/react-dash-shop/compare/0.3.0...0.4.0) (2024-07-22)
+
+
+### Features | 🏁
+
+* add charts loader ([1674aee](https://github.com/alexsandroferreira/react-dash-shop/commit/1674aeec3a8bd7f5caae3ca3efb549c9dc7e009f))
+* add error page ([6278688](https://github.com/alexsandroferreira/react-dash-shop/commit/6278688fe8fd47c0b6c4ec21964a37643ee851ed))
+* add order datails skeleton ([940ef60](https://github.com/alexsandroferreira/react-dash-shop/commit/940ef60fbafd959dc8205a1f08dffabe691aa4ad))
+* add skeleton in metrics cards ([06b153c](https://github.com/alexsandroferreira/react-dash-shop/commit/06b153ce4257ab6c7b299ba75845f8b0d7329af7))
+* add table-row skeleton ([d2a5cfb](https://github.com/alexsandroferreira/react-dash-shop/commit/d2a5cfb7c2239a2e69c6a527ea82aed69619a71c))
+
 ## [0.3.0](https://github.com/alexsandroferreira/react-dash-shop/compare/0.2.0...0.3.0) (2024-07-22)
 
 
